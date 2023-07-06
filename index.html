@@ -6,7 +6,8 @@
     <title>Document</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/index.css">
-    <!-- FONT  -->
+    <!-- FONT AWESOME CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
      <!-- VUE CND -->
      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -18,32 +19,58 @@
 
     </div>
         <div id="app">
+            <div class="container-md">
+                <div class="row row-container">
+                    <!-- LEFT SIDE  -->
+                    <div class="col-md-5 left-side ">
 
-            <div class="container">
-                
-                <div class="left-side">
-                    <div class="header-left">
-                        <div>
-                            <img src="img/avatar_io.jpg" alt="">
-                            <span>
+                        <div class="row left-header-img align-items-center ">
+                            <div class="col-md-auto left-header-img">
+                                <img src="img/avatar_io.jpg" alt="">
+                            </div>
+                            <div class="col" >
                                 Sofia
-                            </span>
+                            </div>
+                            <div class="col-md-auto fa-icon">
+                                <i class="fa-solid fa-circle-notch"></i>
+                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
                         </div>
-                        <div>
-                            
+
+                        <div id="left-header-2" class="row align-items-center">
+                            <div class="col-md-auto ">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="col ">
+                                <div>
+                                    Ricevi notifiche di nuovi messaggi 
+                                </div>
+                                <div>
+                                    Attiva notifiche Desktop
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            
+                        <div id="left-header-3" class="row ">
+                            <div class="col">
+                                <div class="input-group rounded">
+                                    <span class="align-self-center">
+                                       <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                  </div>
+                            </div>
                         </div>
                     </div>
+
+                    </div>
+
+                    <!-- ROGHT SIDE  -->
+
+                    <div class="col-md-7 right-side">
+                            
+                    </div>
                 </div>
-
-                <div class="right-side">
-
-                </div>
-
-
-
 
             </div>
     

@@ -14,12 +14,6 @@
 }
 
 /* GENERAL */
-body{
-    position: relative;
-    display: flex;
-    justify-content: center;
-
-}
 .body-color{
     width: 100%;
     height: 15vh;
@@ -30,41 +24,73 @@ body{
     z-index: -1;
 }
 
-.container{
-    width: 1200px;
-    margin:0 auto;
+
+.container-md{
     height: calc(100vh - 100px);
     margin-top: 50px;
-    display: flex;
+}
+
+.row-container{
+    height: 100%;
 }
 
 /* LEFT SIDE  */
-.left-side{
-    width: 30%;
+.left-header-img {
+    height: 60px;
+}
+img{
     height: 100%;
+    padding: 5px 0;
+    border-radius: 50%;
+}
+
+.fa-icon > * {
+    color: grey;
+    font-size: 1.5em;
+    padding: 5px 10px;
+}
+#left-header-2{
+    background-color: #8EDAFC;
+}
+#left-header-2 div i {
+    color: #8EDAFC;
+    padding:15px 12px;
+    margin: 10px 0px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    background-color: white;
 }
 
 
-/* RIGHT SIDE  */
-.right-side{
-    width: 70%;
-    height: 100%;
+#left-header-2:last-child div div:first-child{
+    font-weight: bold;
+    font-size: 0.9em;
+
+
 }
 
+#left-header-2:last-child div div:last-of-type{
+    color: grey;
+    font-size: 0.7em;
+    text-decoration: underline;
 
-
-
-/* DEBUG  */
-.debug .container{
-    background-color: bisque;
+}
+#left-header-3{
+    margin-top: 10px;
+}
+#left-header-3 div div span{
+    color: grey;
+    padding: 10px;
 }
 
+/* DEGBUG */
+
+.debug .container-md{
+    background-color: antiquewhite;
+}
 .debug .left-side{
-    background-color: lightblue;
+background-color: white;
 }
-
-
-
 .debug .right-side{
-    background-color: lightcoral;
+background-color: lightcoral;
 }
