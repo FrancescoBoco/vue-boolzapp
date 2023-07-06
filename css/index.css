@@ -1,11 +1,5 @@
 /* RESET  */
 
-*{
-    margin: 0 ;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* FONT  */
 
 *
@@ -35,6 +29,10 @@
 }
 
 /* LEFT SIDE  */
+
+    
+
+
 .left-header-img {
     height: 60px;
 }
@@ -45,7 +43,7 @@ img{
 }
 
 .fa-icon > * {
-    color: grey;
+    color: #B1B1B1;
     font-size: 1.5em;
     padding: 5px 10px;
 }
@@ -61,26 +59,61 @@ img{
     background-color: white;
 }
 
-
+.header-text-1{
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.header-text-2{
+    color: #B1B1B1;
+    font-size: 0.7em;
+    text-decoration: underline;
+}
+/* 
+NON ME LO PRENDEVA PIù
 #left-header-2:last-child div div:first-child{
     font-weight: bold;
     font-size: 0.9em;
-
-
 }
 
-#left-header-2:last-child div div:last-of-type{
-    color: grey;
+#left-header-2:last-child div div:last-child{
+    color: #B1B1B1;
     font-size: 0.7em;
     text-decoration: underline;
 
-}
+} */
+
 #left-header-3{
-    margin-top: 10px;
+    margin: 10px 0px;
 }
 #left-header-3 div div span{
-    color: grey;
+    color: #B1B1B1;
     padding: 10px;
+}
+
+/* LEFT SIDE MAIN  */
+.left-main{
+    margin: 20px;
+    position: relative;
+}
+
+.left-main div:nth-child(2)  div:first-child{
+    font-size: 0.9em;
+
+}
+.left-main div:nth-child(2){
+    position: relative;
+}
+
+.left-main div:nth-child(2) div:nth-child(2){
+    color: #B1B1B1;
+    font-size: 0.7em;
+}
+#clock{
+    position: absolute;
+    top: 5px;
+    right:5px;
+    color: #B1B1B1;
+    font-size: 0.7em;
 }
 
 /* DEGBUG */
@@ -88,9 +121,13 @@ img{
 .debug .container-md{
     background-color: antiquewhite;
 }
-.debug .left-side{
+.debug .left-side {
 background-color: white;
 }
 .debug .right-side{
 background-color: lightcoral;
+}
+
+.debug{
+    background-color: #DADBD4;
 }
