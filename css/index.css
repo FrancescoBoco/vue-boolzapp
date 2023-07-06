@@ -30,7 +30,9 @@
 
 /* LEFT SIDE  */
 
-    
+   #left-header-1{
+    background-color: #EAEAEA;
+   } 
 
 
 .left-header-img {
@@ -96,14 +98,14 @@ NON ME LO PRENDEVA PIù
     position: relative;
 }
 
-.left-main div:nth-child(2)  div:first-child{
-    font-size: 0.9em;
-
-}
 .left-main div:nth-child(2){
     position: relative;
 }
 
+.left-main div:nth-child(2)  div:first-child{
+    font-size: 0.9em;
+
+}
 .left-main div:nth-child(2) div:nth-child(2){
     color: #B1B1B1;
     font-size: 0.7em;
@@ -115,6 +117,45 @@ NON ME LO PRENDEVA PIù
     color: #B1B1B1;
     font-size: 0.7em;
 }
+
+/* RIGHT SIDE HEADER   */
+ 
+#right-header-1{
+    background-color: #EAEAEA;
+}
+
+
+#right-header-1 div:nth-child(2)  div:first-child{
+    font-size: 0.9em;
+
+}
+#right-header-1 div:nth-child(2) div:nth-child(2){
+    color: #B1B1B1;
+    font-size: 0.7em;
+}
+/* MAIN RIGHT  */
+
+
+#mian-row{
+    height: calc(100vh - 60px);
+    margin-bottom: 10px;
+}
+#input-search{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+}
+
+#mian-row div:first-child{
+    padding: 10px 30px;
+}
+
+#mian-row div:last-child{
+    padding: 10px 30px;
+    background-color: #EAEAEA;
+}
+
 
 /* DEGBUG */
 
