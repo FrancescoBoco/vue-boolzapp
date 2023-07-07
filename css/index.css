@@ -134,29 +134,55 @@ NON ME LO PRENDEVA PIù
     font-size: 0.7em;
 }
 /* MAIN RIGHT  */
+.sent{
+    display: flex;
+   justify-content: end;
 
-
-#mian-row{
-    height: calc(100vh - 60px);
-    margin-bottom: 10px;
 }
-#input-search{
+.sent > *{
+    margin: 50px;
+    padding: 20px;
+    background-color: #009688;
+    display: flex;
+    border-radius: 10px;
+}
+
+
+.recived{
+    display: flex;
+    
+
+}
+.recived > *{
+    margin: 50px;
+    padding: 20px;
+    background-color:white;
+    border-radius: 10px;
+
+}
+
+.recived > *{
+    margin-left: 50px;
+    padding: 20px;
+}
+.my-container{
+    background-image: url(../img/mine.jpg);
+    height: calc(100% - 60px);
+    position: relative;
+}
+.my-container-footer{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
     width: 100%;
-    border: none;
-    border-radius: 5px;
-    height: 40px;
+    background-color: #B1B1B1;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+    height: 50px;
+
 }
-
-#mian-row div:first-child{
-    padding: 10px 30px;
-}
-
-#mian-row div:last-child{
-    padding: 10px 30px;
-    background-color: #EAEAEA;
-}
-
-
 /* DEGBUG */
 
 .debug .container-md{
@@ -166,7 +192,7 @@ NON ME LO PRENDEVA PIù
 background-color: white;
 }
 .debug .right-side{
-background-color: lightcoral;
+background-color: white;
 }
 
 .debug{
