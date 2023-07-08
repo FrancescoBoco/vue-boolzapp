@@ -6,8 +6,8 @@
 {
     font-family:Arial, Helvetica, sans-serif;
 }
-
 /* GENERAL */
+
 .body-color{
     width: 100%;
     height: 15vh;
@@ -137,30 +137,46 @@ NON ME LO PRENDEVA PIù
 .sent{
     display: flex;
    justify-content: end;
+   position: relative;
+
 
 }
-.sent > *{
-    margin: 30px 30px 0 30px;
+.sent div{
+    margin: 20px;
     padding: 20px;
     background-color: #009688;
-    display: flex;
     border-radius: 10px;
 }
+.sent span{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #B1B1B1;
+    font-size: 0.7em;
+
+}
+
 
 
 .recived{
     display: flex;
-    
-
+    position: relative;
 }
-.recived > *{
-    margin: 30px 30px 0 30px;
+
+.recived div{
+    margin: 20px;
     padding: 20px;
-    background-color:white;
+    background-color: white;
     border-radius: 10px;
+}
+.recived span{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #B1B1B1;
+    font-size: 0.7em;
 
 }
-
 .my-container{
     background-image: url(../img/mine.jpg);
     height: calc(100% - 60px);

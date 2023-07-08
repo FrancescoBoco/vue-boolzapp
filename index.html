@@ -52,7 +52,7 @@
                         </div>
                         
                     </div>
-
+                   
                     <div id="left-header-3" class="row ">
                         <div class="col">
                             <div class="input-group rounded">
@@ -64,151 +64,28 @@
                         </div>
                     </div>
                     <!-- INIZIO MAIN -->
-
-                    <!-- PRIMO CONTATTO -->
-                    <div class="row  align-items-center left-main ">
-                        <div class="col-md-auto " style="height: 60px;">
-                            <img src="img/avatar_1.jpg" alt="">
-                        </div>
-                        <div class="col" >
-                           <div>
-                            Michele
-                           </div>
-                           <div>
-                            Ultimo messaggio inviato
-                           </div>
-                           <div id="clock">
-                            12:00
+                    <div class="main-left-side">
+                         <!-- PRIMO CONTATTO -->
+                        <div class="row  align-items-center left-main " v-for="singleContact in contacts ">
+                            <div class="col-md-auto " style="height: 60px;">
+                                <img :src="singleContact.avatar" :alt="singleContwact.name">
+                            </div>
+                            <div class="col" >
+                            <div>
+                                {{singleContact.name}}
+                            </div>
+                            <div>
+                                Ultimo messaggio inviato
+                            </div>
+                            <div id="clock">
+                                12:00
+                                </div>
                             </div>
                         </div>
+
+
                     </div>
-
-
-                    <div class="row  align-items-center left-main ">
-                        <div class="col-md-auto " style="height: 60px;">
-                            <img src="img/avatar_2.jpg" alt="">
-                        </div>
-                        <div class="col" >
-                           <div>
-                            Fabio
-                           </div>
-                           <div>
-                            Ultimo messaggio inviato
-                           </div>
-                           <div id="clock">
-                            12:00
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row  align-items-center left-main ">
-                        <div class="col-md-auto " style="height: 60px;">
-                            <img src="img/avatar_3.jpg" alt="">
-                        </div>
-                        <div class="col">
-                           <div>
-                            Samuele
-                           </div>
-                           <div>
-                            Ultimo messaggio inviato
-                           </div>
-                           <div id="clock">
-                            12:00
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row  align-items-center left-main ">
-                        <div class="col-md-auto " style="height: 60px;">
-                            <img src="img/avatar_4.jpg" alt="">
-                        </div>
-                        <div class="col">
-                           <div>
-                            Alessandro B.
-                           </div>
-                           <div>
-                            Ultimo messaggio inviato
-                           </div>
-                           <div id="clock">
-                            12:00
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row  align-items-center left-main ">
-                        <div class="col-md-auto " style="height: 60px;">
-                            <img src="img/avatar_5.jpg" alt="">
-                        </div>
-                        <div class="col">
-                           <div>
-                            Alessandro L.
-                           </div>
-                           <div>
-                            Ultimo messaggio inviato
-                           </div>
-                           <div id="clock">
-                            12:00
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row  align-items-center left-main ">
-                        <div class="col-md-auto " style="height: 60px;">
-                            <img src="img/avatar_6.jpg" alt="">
-                        </div>
-                        <div class="col">
-                           <div>
-                            Claudia
-                           </div>
-                           <div>
-                            Ultimo messaggio inviato
-                           </div>
-                           <div id="clock">
-                            12:00
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row  align-items-center left-main ">
-                        <div class="col-md-auto " style="height: 60px;">
-                            <img src="img/avatar_7.jpg" alt="">
-                        </div>
-                        <div class="col">
-                           <div>
-                            Federico
-                           </div>
-                           <div>
-                            Ultimo messaggio inviato
-                           </div>
-                           <div id="clock">
-                            12:00
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row  align-items-center left-main ">
-                        <div class="col-md-auto " style="height: 60px;">
-                            <img src="img/avatar_8.jpg" alt="">
-                        </div>
-                        <div class="col">
-                           <div>
-                            Davide
-                           </div>
-                           <div>
-                            Ultimo messaggio inviato
-                           </div>
-                           <div id="clock">
-                            12:00
-                            </div>
-                        </div>
-                    </div>
-
+                                    
                 </div>
                    
                      <!-- RIGHT SIDE  -->
@@ -238,18 +115,28 @@
                             <div>
                                 hai portato giù il cane?
                             </div>
+                            <span>
+                                15:30
+                            </span>
                         </div>
 
                         <div class="sent">
                             <div>
                                 Ricordati di stendere i panni!
                             </div>
+                            <span>
+                                15:30
+                            </span>
                         </div>
 
                         <div class="recived">
                             <div>
                                 fatto
                             </div>
+
+                            <span>
+                                16:30
+                            </span>
                         </div>
                         
                         <div class="my-container-footer">
