@@ -59,16 +59,16 @@
                                 <span class="align-self-center">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </span>
-                                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                <input  type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
                             </div>
                         </div>
                     </div>
                     <!-- INIZIO MAIN -->
                     <div class="main-left-side">
                          <!-- PRIMO CONTATTO -->
-                        <div class="row  align-items-center left-main " v-for="singleContact in contacts ">
+                        <div class="row  align-items-center left-main" @click="contactAction(i)" v-for="(singleContact, i) in contacts ">
                             <div class="col-md-auto " style="height: 60px;">
-                                <img :src="singleContact.avatar" :alt="singleContwact.name">
+                                <img :src="singleContact.avatar" :alt="singleContact.name">
                             </div>
                             <div class="col" >
                             <div>
@@ -92,14 +92,14 @@
                 <div class="col-md-7 right-side">
                     <div id="right-header-1" class="row justify-content-between align-items-center">
                         <div class="col-md-auto left-header-img">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="contacts[selectedContact].avatar" alt="">
                         </div>
                         <div class="col">
                             <div>
-                                Michele
+                                {{contacts[selectedContact].name}}
                                </div>
                                <div>
-                                Ultimo accesso oggi alle 12:00
+                                Ultimo accesso oggi alle 12
                                </div>
                         </div>
                         <div class="col-md-auto fa-icon">
@@ -111,33 +111,49 @@
 
                     <!-- Rifare il bottom con container al 100% e mettere la row al fondo con dentro le col  -->
                     <div class="my-container">
-                        <div class="sent">
-                            <div>
-                                hai portato giù il cane?
-                            </div>
-                            <span>
-                                15:30
-                            </span>
-                        </div>
-
-                        <div class="sent">
-                            <div>
-                                Ricordati di stendere i panni!
-                            </div>
-                            <span>
-                                15:30
-                            </span>
-                        </div>
-
-                        <div class="recived">
-                            <div>
-                                fatto
+                        <div 
+                        v-for="singleMessages in contacts[selectedContact].messages">
+                            
+                            <div class="sent" 
+                                 v-if="singleMessages.status == 'sent' ">
+                                <div>
+                                     {{singleMessages.message}}
+                                </div>
+                                <span>
+                                    {{singleMessages.date}}
+                                </span>
                             </div>
 
-                            <span>
-                                16:30
-                            </span>
+                            <div class="recived" 
+                            v-else>
+                                <div>
+                                    {{singleMessages.message}}
+                                </div>
+                                <span>
+                                    {{singleMessages.date}}
+                                </span>
+                            </div>
+<!-- 
+                            <div class="sent">
+                                <div>
+                                    Ricordati di stendere i panni!
+                                </div>
+                                <span>
+                                    15:30
+                                </span>
+                            </div>
+
+                            <div class="recived">
+                                <div>
+                                    fatto
+                                </div>
+
+                                <span>
+                                    16:30
+                                </span>
+                            </div> -->
                         </div>
+                        
                         
                         <div class="my-container-footer">
                             

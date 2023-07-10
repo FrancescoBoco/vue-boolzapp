@@ -4,7 +4,9 @@ console.log(Vue)
 createApp({
     data(){
         return{
-            contacts: [ {
+            selectedContact: 0,
+            contacts:
+             [ {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
                 visible: true,
@@ -172,8 +174,17 @@ createApp({
                 message: 'OK!!',
                 status: 'received'
             },
+            
         ],
-    }] 
+        
+    },
+] 
 }
-}
+},
+    methods: {
+        
+        contactAction(index){ 
+            this.selectedContact = index;
+        }
+    }
 }).mount('#app')
