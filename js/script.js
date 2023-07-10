@@ -178,13 +178,34 @@ createApp({
         ],
         
     },
-] 
+],
+newMessage: ''
 }
 },
     methods: {
         
         contactAction(index){ 
             this.selectedContact = index;
-        }
+        },
+        createMessage(){
+            this.contacts[this.selectedContact].messages.push({
+                date: 'Oggi',
+                message: this.newMessage,
+                status: 'sent'})
+
+            this.newMessage = ''
+
+           
+            setTimeout(this.ourMessage,1000)
+
+            
+        },
+        ourMessage() {
+            this.contacts[this.selectedContact].messages.push({
+                date: 'Oggi',
+                message: 'Ok!',
+                status: 'received'});
+            }
+        
     }
 }).mount('#app')

@@ -66,19 +66,24 @@
                     <!-- INIZIO MAIN -->
                     <div class="main-left-side">
                          <!-- PRIMO CONTATTO -->
-                        <div class="row  align-items-center left-main" @click="contactAction(i)" v-for="(singleContact, i) in contacts ">
+                        <div class="row  align-items-center left-main"
+                         @click="contactAction(i)" 
+                         v-for="(singleContact, i) in contacts "
+                         :class="{
+                            'active' : i == selectedContact
+                         }">
                             <div class="col-md-auto " style="height: 60px;">
                                 <img :src="singleContact.avatar" :alt="singleContact.name">
                             </div>
                             <div class="col" >
-                            <div>
-                                {{singleContact.name}}
-                            </div>
-                            <div>
-                                Ultimo messaggio inviato
-                            </div>
-                            <div id="clock">
-                                12:00
+                                <div>
+                                    {{singleContact.name}}
+                                </div>
+                                <div>
+                                    Ultimo messaggio inviato
+                                </div>
+                                <div id="clock">
+                                    12:00
                                 </div>
                             </div>
                         </div>
@@ -124,7 +129,7 @@
                                 </span>
                             </div>
 
-                            <div class="recived" 
+                            <div class="received" 
                             v-else>
                                 <div>
                                     {{singleMessages.message}}
@@ -162,8 +167,10 @@
                                 <i class="fa-solid fa-face-smile"></i>
                             </div>
                             <div class="middel-footer">
-                                <input type="search" placeholder="Digita il messaggio...">
-                                
+                                <input 
+                                    v-model="newMessage" 
+                                    @keyup.enter="createMessage()"
+                                    type="search" placeholder="Digita il messaggio...">
                             </div>
                             <div class="right-footer">
                                 <i class="fa-solid fa-microphone"></i>
