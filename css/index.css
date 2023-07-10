@@ -9,8 +9,8 @@
 /* GENERAL */
 
 .main-left-side{
-    overflow: auto;
-    height: 100%;
+    overflow-y: auto;
+    height: calc(100% - 200.2px);
 }
 .body-color{
     width: 100%;
@@ -22,9 +22,12 @@
     z-index: -1;
 }
 
-.main-left-side > *:hover,
-.active{
+.main-left-side > *:hover{
     background-color: rgb(232, 231, 231);
+}
+
+.active{
+    background-color: rgb(67, 147, 217);
 }
 
 .container-md{
@@ -195,13 +198,38 @@ NON ME LO PRENDEVA PIù
     bottom: 0px;
     left: 0px;
     width: 100%;
-    background-color: #B1B1B1;
+    background-color: #F3EEEA;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items:center;
 
-    height: 50px;
+    height: 60px;
 
+}
+.right-footer i {
+    color: #798186;
+    font-size: 1.3em;
+    padding: 10px 20px;
+}
+.middel-footer{
+    width: 100%;
+
+}
+.middel-footer input{
+    width: 100%;
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+.left-footer i {
+    color: #798186;
+    font-size: 1.3em;
+    padding: 10px 20px;
 }
 /* DEGBUG */
 

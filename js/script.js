@@ -203,7 +203,7 @@ newMessage: ''
         ourMessage() {
             this.contacts[this.selectedContact].messages.push({
                 date: 'Oggi',
-                message: 'Ok!',
+                message: 'No...',
                 status: 'received'});
             }
         
