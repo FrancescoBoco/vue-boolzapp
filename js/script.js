@@ -179,7 +179,9 @@ createApp({
         
     },
 ],
-newMessage: ''
+newMessage: '',
+searchInputText:'',
+filteredContacts:[]
 }
 },
     methods: {
@@ -205,7 +207,30 @@ newMessage: ''
                 date: 'Oggi',
                 message: 'No...',
                 status: 'received'});
-            }
-        
+                
+            },
+            
+
+            searchMessages(){
+            
+                let filter, nameValue;
+                filter = this.searchInputText.toUpperCase();
+    
+                this.contacts.forEach(element => {
+    
+                    nameValue = element.name;
+                    if (nameValue.toUpperCase().includes(filter)) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+    
+                });
+            },
+            deleteMessage(index){
+                console.log('-',index)
+                this.contacts[this.selectedContact].messages.splice(index, 1)
+            } 
+        // 
     }
 }).mount('#app')

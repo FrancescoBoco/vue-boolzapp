@@ -109,7 +109,7 @@ NON ME LO PRENDEVA PIù
     position: relative;
 }
 
-.left-main div:nth-child(2){
+.left-main  div:nth-child(2){
     position: relative;
 }
 
@@ -192,6 +192,7 @@ NON ME LO PRENDEVA PIù
     background-image: url(../img/mine.jpg);
     height: calc(100% - 60px);
     position: relative;
+    overflow-y: auto;
 }
 .my-container-footer{
     position: absolute;
@@ -225,6 +226,9 @@ NON ME LO PRENDEVA PIù
     border-radius: 4px;
     flex-grow: 1;
 }
+.my-dropdown{
+    background-color: #009688;
+}
 
 .left-footer i {
     color: #798186;
@@ -242,6 +246,8 @@ height: 100%;
 }
 .debug .right-side{
 background-color: white;
+height: 100%;
+
 }
 
 .debug{

@@ -26,10 +26,10 @@
 
                     <div id="left-header-1"  class="row left-header-img align-items-center ">
                         <div class="col-md-auto left-header-img">
-                            <img src="img/avatar_io.jpg" alt="">
+                            <img src="img/avatar_1.jpg" alt="">
                         </div>
                         <div class="col" >
-                            Sofia
+                            Franc
                         </div>
                         <div class="col-md-auto fa-icon">
                             <i class="fa-solid fa-circle-notch"></i>
@@ -59,7 +59,8 @@
                                 <span class="align-self-center">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </span>
-                                <input  type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                <input  type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon"
+                                    v-model="searchInputText"  @keyup="searchMessages()" />
                             </div>
                         </div>
                     </div>
@@ -72,20 +73,23 @@
                          :class="{
                             'active' : i == selectedContact
                          }">
-                            <div class="col-md-auto " style="height: 60px;">
-                                <img :src="singleContact.avatar" :alt="singleContact.name">
-                            </div>
-                            <div class="col" >
-                                <div>
-                                    {{singleContact.name}}
+                            <template v-if="singleContact.visible">
+                                <div class="col-md-auto " style="height: 60px;">
+                                    <img :src="singleContact.avatar" :alt="singleContact.name">
                                 </div>
-                                <div>
-                                    Ultimo messaggio inviato
+                                <div class="col" >
+                                    <div>
+                                        {{singleContact.name}}
+                                    </div>
+                                    <div>
+                                        Ultimo messaggio inviato
+                                    </div>
+                                    <div id="clock">
+                                        12:00
+                                    </div>
                                 </div>
-                                <div id="clock">
-                                    12:00
-                                </div>
-                            </div>
+                            </template>
+                            
                         </div>
 
 
@@ -117,15 +121,25 @@
                     <!-- Rifare il bottom con container al 100% e mettere la row al fondo con dentro le col  -->
                     <div class="my-container">
                         <div 
-                        v-for="singleMessages in contacts[selectedContact].messages">
+                        
+                        v-for="(singleMessages, i) in contacts[selectedContact].messages">
                             
                             <div class="sent" 
                                  v-if="singleMessages.status == 'sent' ">
                                 <div>
                                      {{singleMessages.message}}
+                                     <button id="my-dropdown" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" @click="deleteMessage(i)" href="#">Delate </a></li>
+                                      
+                                    </ul>
                                 </div>
                                 <span>
-                                    {{singleMessages.date}}
+                                    {{singleMessages.date}} 
+                                    
+                                        
+                                      
                                 </span>
                             </div>
 
@@ -133,30 +147,17 @@
                             v-else>
                                 <div>
                                     {{singleMessages.message}}
+                                    <button id="my-dropdown" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" @click="deleteMessage(i)" href="#">Delate </a></li>
+                                      
+                                    </ul>
                                 </div>
                                 <span>
                                     {{singleMessages.date}}
                                 </span>
                             </div>
-<!-- 
-                            <div class="sent">
-                                <div>
-                                    Ricordati di stendere i panni!
-                                </div>
-                                <span>
-                                    15:30
-                                </span>
-                            </div>
-
-                            <div class="recived">
-                                <div>
-                                    fatto
-                                </div>
-
-                                <span>
-                                    16:30
-                                </span>
-                            </div> -->
                         </div>
                         
                         
